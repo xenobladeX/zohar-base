@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: zohar-base-sample-baal
+
+server:
+  port: 8000

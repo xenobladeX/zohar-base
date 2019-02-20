@@ -14,21 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.xenoblade.zohar.base.sample.baal;
+package com.xenoblade.zohar.base.sample.agares.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * BaalApplication
+ * AgaresApplication
  * @author xenoblade
  * @since 1.0.0
  */
 @SpringBootApplication
-public class BaalApplication {
+@EnableFeignClients
+public class AgaresApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BaalApplication.class, args);
+        SpringApplication.run(AgaresApplication.class, args);
     }
 
 }

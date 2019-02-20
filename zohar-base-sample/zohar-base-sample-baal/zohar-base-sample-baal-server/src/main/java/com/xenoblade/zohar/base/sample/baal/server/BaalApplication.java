@@ -14,27 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.xenoblade.zohar.base.sample.baal.controller;
+package com.xenoblade.zohar.base.sample.baal.server;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Date;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * HelloController
+ * BaalApplication
  * @author xenoblade
  * @since 1.0.0
  */
-@RestController
-@RequestMapping("/hello")
-public class HelloController {
+@SpringBootApplication
+@EnableFeignClients
+public class BaalApplication {
 
-    @GetMapping("/")
-    public String hello(@RequestParam String name) {
-        return "Hello, " + name + " " + new Date();
+    public static void main(String[] args) {
+        SpringApplication.run(BaalApplication.class, args);
     }
 
 }

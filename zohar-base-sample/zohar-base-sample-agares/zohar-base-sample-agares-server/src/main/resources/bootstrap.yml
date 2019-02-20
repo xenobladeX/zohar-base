@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: zohar-base-sample-agares
+
+server:
+  port: 8001

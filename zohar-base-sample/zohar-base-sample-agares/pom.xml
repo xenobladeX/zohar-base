@@ -7,13 +7,14 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>zohar-base-sample-baal</artifactId>
-    <name>Zohar Base Sample Baal</name>
+    <artifactId>zohar-base-sample-agares</artifactId>
+    <name>Zohar Base Sample Agares</name>
     <packaging>pom</packaging>
 
     <modules>
-        <module>zohar-base-sample-baal-api</module>
-        <module>zohar-base-sample-baal-server</module>
+        <module>zohar-base-sample-agares-api</module>
+        <module>zohar-base-sample-agares-server</module>
     </modules>
+
 
 </project>

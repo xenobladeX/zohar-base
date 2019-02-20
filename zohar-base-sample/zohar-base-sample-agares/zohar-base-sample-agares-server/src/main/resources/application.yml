@@ -1,10 +1,3 @@
-spring:
-  application:
-    name: zohar-base-sample-baal
-
-server:
-  port: 8000
-
 eureka:
   client:
     service-url:

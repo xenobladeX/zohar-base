@@ -14,6 +14,7 @@
 
     <modules>
         <module>zohar-base-sample-baal</module>
+        <module>zohar-base-sample-agares</module>
     </modules>
 
 
