@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: zohar-base-registry
+server:
+  port: 7000
