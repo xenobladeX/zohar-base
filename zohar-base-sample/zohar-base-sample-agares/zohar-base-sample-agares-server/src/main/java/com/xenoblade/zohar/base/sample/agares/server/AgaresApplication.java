@@ -26,7 +26,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @since 1.0.0
  */
 @SpringBootApplication
-@EnableFeignClients
+@EnableFeignClients({"com.xenoblade.zohar.base.sample.baal.api.feign"})
 public class AgaresApplication {
 
     public static void main(String[] args) {

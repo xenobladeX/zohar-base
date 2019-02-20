@@ -14,21 +14,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.xenoblade.zohar.base.sample.baal.api;
+package com.xenoblade.base.sample.agares.api.feign;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * IHelloService
  * @author xenoblade
  * @since 1.0.0
  */
-@FeignClient(name = "zohar-base-sample-baal")
+@FeignClient(name = "zohar-base-sample-agares")
 public interface IHelloService {
 
-    @GetMapping("/hello/")
-    String hello(@RequestParam(value = "name") String name);
+    @GetMapping("/hello/{name}")
+    String index(@PathVariable("name") String name);
 
 }

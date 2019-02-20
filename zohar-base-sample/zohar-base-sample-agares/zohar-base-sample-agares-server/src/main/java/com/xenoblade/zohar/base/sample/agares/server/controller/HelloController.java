@@ -16,7 +16,7 @@
  */
 package com.xenoblade.zohar.base.sample.agares.server.controller;
 
-import com.xenoblade.zohar.base.sample.baal.api.IHelloService;
+import com.xenoblade.zohar.base.sample.baal.api.feign.IHelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,11 +33,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @Autowired
-    private IHelloService helloRemote;
+    private IHelloService helloService;
 
     @GetMapping("/{name}")
     public String index(@PathVariable("name") String name) {
-        return helloRemote.hello(name + "!");
+        return helloService.hello(name + "!");
     }
 
 }

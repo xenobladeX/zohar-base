@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.xenoblade.base.sample.agares.api;
+package com.xenoblade.zohar.base.sample.baal.api.feign;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author xenoblade
  * @since 1.0.0
  */
-@FeignClient(name = "zohar-base-sample-agares")
+@FeignClient(name = "zohar-base-sample-baal")
 public interface IHelloService {
 
     @GetMapping("/hello/")
