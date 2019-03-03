@@ -18,7 +18,7 @@
         <module>zohar-base-parent</module>
         <module>zohar-base-registry</module>
         <module>zohar-base-gateway</module>
-
+        <module>zohar-base-commons</module>
         <module>zohar-base-sample</module>
     </modules>
 

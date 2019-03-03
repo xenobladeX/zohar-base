@@ -6,14 +6,36 @@ spring:
       discovery:
         locator:
           enabled: true
-#      routes:
-#        - id: default_path_to_http
-#          uri: https://windmt.com
-#          order: 10000
-#          predicates:
-#            - Path=/**
-#          filters:
-#            - SetPath=/
+      default-filters:
+        - Elapsed=true
+
+        - name: RequestRateLimiter
+          args:
+            key-resolver: '#{@remoteAddrKeyResolver}'
+            redis-rate-limiter.replenishRate: 1
+            redis-rate-limiter.burstCapacity: 5
+
+      routes:
+        - id: service_customer
+          uri: lb://ZOHAR-BASE-SAMPLE-AGARES
+          order: 0
+          predicates:
+            - Path=/agares/**
+          filters:
+            - StripPrefix=1
+
+            - AddResponseHeader=X-Response-Default-Foo, Default-Bar
+
+  redis:
+    host: localhost
+    port: 6379
+#    database: 0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 server:
   port: 10000
@@ -26,3 +48,4 @@ eureka:
 logging:
   level:
     org.springframework.cloud.gateway: debug
+
